@@ -1,4 +1,4 @@
-package com.gg.sfgdi.services;
+package com.gg.services;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;

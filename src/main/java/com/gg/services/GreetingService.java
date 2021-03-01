@@ -1,4 +1,4 @@
-package com.gg.sfgdi.services;
+package com.gg.services;
 
 public interface GreetingService {
 
