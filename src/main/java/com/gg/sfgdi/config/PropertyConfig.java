@@ -10,7 +10,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
 
 @Configuration
-@PropertySource("classpath:datasource.properties")
+//@PropertySource("classpath:datasource.properties")
 /*
     Multiple property files configuration
 @PropertySource({"classpath:datasource.properties, classpath:another.properties}")
@@ -23,9 +23,8 @@ OR
  */
 public class PropertyConfig {
 
-
-    @Autowired
-    Environment env;
+   //@Autowired
+    //Environment env;
 
     @Value("${gg.username}")
     String user;
@@ -40,10 +39,12 @@ public class PropertyConfig {
     public FakeDataSource fakeDataSource(){
         FakeDataSource fakeDataSource = new FakeDataSource();
         fakeDataSource.setPassword(password);
-        fakeDataSource.setUrl(env.getProperty("ANT_HOME"));
+        fakeDataSource.setUrl(url);
         fakeDataSource.setUser(user);
         return fakeDataSource;
     }
+
+
 
     //Redundant, this does not need to be especified. Spring5 thing only maybe?
    /* @Bean
