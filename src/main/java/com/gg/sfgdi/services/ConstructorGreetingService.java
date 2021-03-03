@@ -1,4 +1,4 @@
-package com.gg.services;
+package com.gg.sfgdi.services;
 
 
 import org.springframework.stereotype.Service;

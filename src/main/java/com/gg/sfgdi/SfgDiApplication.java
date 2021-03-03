@@ -1,24 +1,29 @@
 package com.gg.sfgdi;
 
 import com.gg.sfgdi.controllers.*;
+import com.gg.sfgdi.persistence.FakeDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.gg.services", "com.gg.sfgdi"})
 public class SfgDiApplication {
 
 	public static void main(String[] args) {
 
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
 
-		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
-		System.out.println(i18nController.sayHello() );
-
 		MyController myController = (MyController) ctx.getBean("myController");
 
+		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
+		System.out.println(fakeDataSource.getUser());
+		System.out.println(fakeDataSource.getPassword());
+		System.out.println(fakeDataSource.getUrl());
+
+
+
+		/*
 		System.out.println("----------- Primary");
 		System.out.println(myController.sayHello());
 
@@ -36,6 +41,8 @@ public class SfgDiApplication {
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
 
 		System.out.println(constructorInjectedController.getGreeting());
+		*/
+
 
 
 	}

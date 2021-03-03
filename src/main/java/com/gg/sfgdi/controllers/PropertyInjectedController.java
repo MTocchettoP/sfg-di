@@ -1,6 +1,6 @@
 package com.gg.sfgdi.controllers;
 
-import com.gg.services.GreetingService;
+import com.gg.sfgdi.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;

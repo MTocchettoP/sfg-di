@@ -1,6 +1,6 @@
 package com.gg.sfgdi.controllers;
 
-import com.gg.services.ConstructorGreetingService;
+import com.gg.sfgdi.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
