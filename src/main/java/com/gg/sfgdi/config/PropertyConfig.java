@@ -11,6 +11,16 @@ import org.springframework.core.env.Environment;
 
 @Configuration
 @PropertySource("classpath:datasource.properties")
+/*
+    Multiple property files configuration
+@PropertySource({"classpath:datasource.properties, classpath:another.properties}")
+OR
+@PropertySources({
+    @PropertySource("classpath:datasource.properties),
+    @PropertySource("classpath:another.properties")
+})
+
+ */
 public class PropertyConfig {
 
 
